@@ -1,4 +1,4 @@
-# 🛍️ Projeto 3: Loja Online
+# 🛍️ Projeto 2: Loja Online
 
 **Disciplina:** Banco de Dados  
 **Curso:** Técnico em Desenvolvimento de Sistemas  

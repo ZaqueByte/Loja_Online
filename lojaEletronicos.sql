@@ -54,6 +54,16 @@ CREATE TABLE Estoque (
 );
 
 -- --------------------------------------------------------------------------------
+-- VIEWS DO BANCO
+CREATE VIEW viewProdutosLoja AS
+SELECT p.nome as nomeProd, p.preco, p.descricao, p.tipo, p.categoria, p.desconto_usados,
+p.data_lancamento, e.quantidade_disponivel, l.nome as nomeLoja, l.cidade, l.telefone FROM Produto as p
+INNER JOIN Estoque as e
+INNER JOIN Loja as l
+ON p.id = e.id_produto
+AND l.id = e.id_loja;
+
+-- --------------------------------------------------------------------------------
 -- POPULAÇÃO DO BANCO
 
 INSERT INTO Produto 

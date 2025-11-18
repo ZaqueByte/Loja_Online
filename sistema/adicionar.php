@@ -2,14 +2,19 @@
     include 'conexao.php';
 
     $nome = $_POST['txtNome'];
-    $email = $_POST['txtEmail'];
+    $descricao = $_POST['txtDescricao'];
+    $preco = $_POST['txtPreco'];
+    $tipo = $_POST['txtTipo'];
+    $categoria = $_POST['txtCategoria'];
     $data = $_POST['txtData'];
+    $desconto = $_POST['txtDesconto'];
 
-    $sql = $pdo->prepare("INSERT INTO Aluno (nome, email, data_nascimento)
+    $sql = $pdo->prepare("INSERT INTO Produto (nome, descricao, 
+    preco, tipo, categoria, data_lancamento, desconto_usados)
     VALUES (?, ?, ?)");
 
-    $sql->execute([$nome, $email, $data]);
+    $sql->execute([$nome, $descricao, $preco, $tipo, $categoria, $data, $desconto]);
 
-    header("Location: index.php");
+    header("Location: produtos.php");
     exit;
 ?>
