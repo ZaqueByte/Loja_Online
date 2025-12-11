@@ -11,7 +11,7 @@
 
     $sql = $pdo->prepare("INSERT INTO Produto (nome, descricao, 
     preco, tipo, categoria, data_lancamento, desconto_usados)
-    VALUES (?, ?, ?)");
+    VALUES (?, ?, ?, ?, ?, ?, ?)");
 
     $sql->execute([$nome, $descricao, $preco, $tipo, $categoria, $data, $desconto]);
 
